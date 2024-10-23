@@ -1,0 +1,18 @@
+<section class="bg-white text-gray-900 py-20 px-6 rounded-lg shadow-xl">
+  <h2 class="text-4xl font-extrabold text-center mb-10">Skills</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div
+      *ngFor="let skill of skills"
+      class="bg-gray-100 p-6 rounded-lg shadow-lg hover:bg-gray-200 transition-colors duration-300"
+    >
+      <h3 class="text-xl font-bold mb-4 text-blue-500">{{ skill.name }}</h3>
+      <div class="w-full bg-gray-300 rounded-full h-4 mb-4">
+        <div
+          [ngStyle]="{ width: skill.level + '%' }"
+          class="bg-blue-500 h-full rounded-full"
+        ></div>
+      </div>
+      <p class="text-sm text-gray-600">Proficiency: {{ skill.level }}%</p>
+    </div>
+  </div>
+</section>

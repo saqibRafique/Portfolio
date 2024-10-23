@@ -1,0 +1,13 @@
+.menu-closed {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.menu-open {
+  max-height: 500px; /* Adjust based on content */
+  opacity: 1;
+  visibility: visible;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
