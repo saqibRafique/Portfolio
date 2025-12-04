@@ -37,7 +37,7 @@ codebase.`,
       and enhancing the user experience across devices. Improved page load 
       times and integrated interactive features using HTML, CSS, and JavaScript.`,
       image: 'assets/images/BBM.png',
-      link: 'https://bestbuymall.pk/',
+      link: 'https://business.bestbuymall.pk/',
     },
     {
       name: 'Mono Inu Dashboard',
