@@ -40,6 +40,24 @@ codebase.`,
       link: 'https://business.bestbuymall.pk/',
     },
     {
+      name: 'Think & Code',
+      description: `Built the Think & Code company website from scratch using Angular.
+  Focused on a clean, modern UI, responsive layout, and modular component-based
+  architecture. Optimized the application for production and deployed it using
+  Firebase Hosting.`,
+      image: 'assets/images/think-and-code.png',
+      link: 'https://thinkandcode.co',
+    },
+    {
+      name: 'SmartAdminWork',
+      description: `Developed SmartAdminWork, a SaaS platform for asset and maintenance
+  management, entirely from scratch using Angular. Implemented scalable frontend
+  architecture, reusable UI components, and a user-focused experience.
+  Deployed and maintained the application on Firebase Hosting.`,
+      image: 'assets/images/smart-admin-work.png',
+      link: 'https://smartadminwork.com',
+    },
+    {
       name: 'Mono Inu Dashboard',
       description: `Developed the frontend of the Mono Inu Dashboard, creating 
       a responsive and interactive interface for monitoring cryptocurrency data. 
