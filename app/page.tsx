@@ -19,6 +19,30 @@ const skills = [
   "Jira",
 ];
 
+const experience = [
+  {
+    company: "Arbisoft",
+    role: "Principal / Senior Software Engineer",
+    period: "2021 — Present",
+    summary:
+      "Leading and contributing to modern web products with a focus on frontend architecture, React, Next.js, TypeScript, quality engineering, and cross-functional delivery.",
+  },
+  {
+    company: "Emblem Technologies",
+    role: "Software Engineer",
+    period: "2020 — 2021",
+    summary:
+      "Built production frontend experiences and strengthened reusable implementation patterns across client-facing web applications.",
+  },
+  {
+    company: "PixyFlux",
+    role: "Software Engineer",
+    period: "2019 — 2020",
+    summary:
+      "Worked across frontend development and product implementation, building responsive interfaces and strengthening core web engineering fundamentals.",
+  },
+];
+
 const projects = [
   {
     name: "Zuub",
@@ -99,6 +123,7 @@ export default function Home() {
           </a>
           <nav className="nav-links" aria-label="Primary navigation">
             <a href="#about">About</a>
+            <a href="#experience">Experience</a>
             <a href="#expertise">Expertise</a>
             <a href="#work">Work</a>
             <a href="#contact">Contact</a>
@@ -202,6 +227,29 @@ export default function Home() {
               simplify complex implementations, mentor developers, and promote
               practices that keep teams productive as products grow.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-dark" id="experience">
+        <div className="shell">
+          <div className="section-heading experience-heading">
+            <span className="kicker">Experience</span>
+            <h2>Building software across product teams and engineering roles.</h2>
+          </div>
+          <div className="experience-list">
+            {experience.map((item) => (
+              <article className="experience-row" key={item.company}>
+                <div>
+                  <span className="experience-period">{item.period}</span>
+                  <h3>{item.company}</h3>
+                </div>
+                <div>
+                  <strong>{item.role}</strong>
+                  <p>{item.summary}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
