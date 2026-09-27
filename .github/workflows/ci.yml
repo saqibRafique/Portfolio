@@ -4,12 +4,13 @@ on:
   push:
     branches:
       - modernize-nextjs-2026
+      - post-merge-review-fixes
   pull_request:
     branches:
       - main
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -27,6 +28,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
+
+      - name: Commit generated lockfile
+        if: github.event_name == 'push' && github.ref_name == 'post-merge-review-fixes'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git diff --cached --quiet || git commit -m "chore: generate package lock"
+          git push
 
       - name: Typecheck
         run: npm run typecheck
