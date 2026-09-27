@@ -198,14 +198,6 @@ export default function Home() {
               className="portrait"
             />
           </div>
-          <div className="floating-note note-one">
-            <span>Current focus</span>
-            <strong>Scalable frontend systems</strong>
-          </div>
-          <div className="floating-note note-two">
-            <span>Approach</span>
-            <strong>Clean · Tested · Accessible</strong>
-          </div>
         </div>
       </section>
 
