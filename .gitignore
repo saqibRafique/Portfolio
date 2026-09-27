@@ -1,4 +1,8 @@
-/dist
-/node_modules
-/.angular
-/.firebase
+.next
+out
+node_modules
+.firebase
+.env*
+!.env.example
+.DS_Store
+*.tsbuildinfo
