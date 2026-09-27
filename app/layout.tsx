@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./motion.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://saqib-portfolio-87708.web.app"),
