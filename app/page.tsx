@@ -190,7 +190,7 @@ export default function Home() {
           <div className="portrait-glow" />
           <div className="portrait-card">
             <Image
-              src="/profile.webp"
+              src="/profile.jpg"
               alt="Muhammad Saqib Rafique"
               width={720}
               height={720}
