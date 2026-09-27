@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   validate:
+    name: Validate application
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -23,7 +24,7 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Install dependencies
+      - name: Install locked dependencies
         run: npm ci --no-audit --no-fund
 
       - name: Typecheck
@@ -32,5 +33,24 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Build
+      - name: Production build
         run: npm run build
+
+      - name: Verify static export
+        run: node scripts/verify-build.mjs
+
+  dependency-review:
+    name: Dependency review
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Review dependency changes
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
