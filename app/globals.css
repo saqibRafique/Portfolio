@@ -1430,3 +1430,123 @@ body.nav-open {
     text-align: right;
   }
 }
+
+
+/* Mobile regression fixes: keep this block last to override legacy menu rules. */
+@media (max-width: 980px) {
+  .site-header {
+    z-index: 100;
+  }
+
+  .hero-copy {
+    order: 0;
+  }
+
+  .hero-profile {
+    order: 1;
+    margin-inline: auto;
+  }
+
+  .mobile-nav {
+    position: static;
+  }
+
+  .mobile-nav-panel {
+    position: fixed;
+    top: 66px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100dvh - 66px);
+    padding: 28px 24px 32px;
+    border: 0;
+    border-radius: 0;
+    background:
+      radial-gradient(circle at 84% 8%, rgba(33,212,253,.12), transparent 22rem),
+      radial-gradient(circle at 10% 80%, rgba(124,92,255,.18), transparent 24rem),
+      #060914;
+    backdrop-filter: none;
+    box-shadow: none;
+    overflow-y: auto;
+  }
+
+  .mobile-nav-inner {
+    min-height: 100%;
+    width: min(100%, 620px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 28px;
+  }
+
+  .mobile-nav-panel nav {
+    position: static;
+    inset: auto;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    align-self: center;
+    display: grid;
+  }
+
+  .mobile-nav-panel nav a {
+    position: static;
+    width: 100%;
+    margin: 0;
+    padding: 18px 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255,255,255,.10);
+    border-radius: 0;
+    background: transparent;
+    color: #f7f8fc;
+    box-shadow: none;
+    font-size: clamp(2.2rem, 9vw, 4rem);
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .hero-copy {
+    order: 0;
+    width: 100%;
+  }
+
+  .hero-profile {
+    order: 1;
+    width: 100%;
+    margin: 0;
+  }
+
+  .profile-frame {
+    min-height: 430px;
+  }
+
+  .profile-card {
+    display: none;
+  }
+
+  .profile-signature {
+    margin-top: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .mobile-nav-panel {
+    padding-inline: 20px;
+  }
+
+  .profile-frame {
+    min-height: 400px;
+  }
+}
