@@ -7,13 +7,14 @@ Modern portfolio built with Next.js, React, and TypeScript.
 - Next.js 16
 - React 19
 - TypeScript
-- CSS
+- Vitest + Testing Library
+- Storybook
 - Firebase Hosting (static export)
 
 ## Local development
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -21,11 +22,24 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Quality checks
 
+Every pull request to `main` runs:
+
 ```bash
 npm run typecheck
 npm run lint
+npm test
+npm run storybook:build
 npm run build
+node scripts/verify-build.mjs
 ```
+
+## Storybook
+
+```bash
+npm run storybook
+```
+
+Storybook includes accessibility checks and desktop/mobile component stories.
 
 ## Production build
 
@@ -36,6 +50,4 @@ npm run build
 firebase deploy --only hosting
 ```
 
-## Branch
-
-The Next.js migration was developed on `modernize-nextjs-2026`.
+Merges to `main` are deployed automatically to Firebase Hosting by GitHub Actions.
