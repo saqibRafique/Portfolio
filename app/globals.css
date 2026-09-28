@@ -1638,3 +1638,279 @@ body.nav-open {
     height: calc(100dvh - 66px);
   }
 }
+
+
+/* Final mobile polish */
+html {
+  scroll-padding-top: 96px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#top,
+#about,
+#experience,
+#expertise,
+#work,
+#contact {
+  scroll-margin-top: 96px;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #78e7ff;
+  outline-offset: 4px;
+}
+
+.site-header {
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.nav-wrap {
+  position: relative;
+}
+
+.menu-toggle {
+  color: #eef3ff;
+}
+
+.menu-toggle:hover {
+  border-color: rgba(120, 231, 255, .28);
+  background: rgba(255,255,255,.07);
+}
+
+.hero-copy > * {
+  animation: hero-enter 620ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+.hero-copy > *:nth-child(2) { animation-delay: 70ms; }
+.hero-copy > *:nth-child(3) { animation-delay: 120ms; }
+.hero-copy > *:nth-child(4) { animation-delay: 170ms; }
+.hero-copy > *:nth-child(5) { animation-delay: 220ms; }
+
+.hero-profile {
+  animation: profile-enter 700ms cubic-bezier(.2,.8,.2,1) 140ms both;
+}
+
+.hero h1 {
+  text-wrap: balance;
+}
+
+.hero-lead,
+.section-heading p,
+.about-copy p,
+.project-copy p,
+.cta-panel p {
+  text-wrap: pretty;
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes profile-enter {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 980px) {
+  html {
+    scroll-padding-top: 88px;
+  }
+
+  #top,
+  #about,
+  #experience,
+  #expertise,
+  #work,
+  #contact {
+    scroll-margin-top: 88px;
+  }
+
+  main {
+    padding-top: 72px;
+  }
+
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    width: 100%;
+    z-index: 120;
+    background: rgba(6, 9, 20, .86);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 12px 40px rgba(0,0,0,.16);
+    backdrop-filter: blur(22px) saturate(145%);
+    -webkit-backdrop-filter: blur(22px) saturate(145%);
+  }
+
+  .nav-wrap {
+    min-height: 72px;
+  }
+
+  .menu-toggle {
+    width: 46px;
+    height: 46px;
+    border-radius: 15px;
+  }
+
+  .mobile-nav-panel {
+    top: 72px;
+    height: calc(100dvh - 72px);
+  }
+
+  .mobile-nav-panel nav a {
+    min-height: 64px;
+  }
+
+  .hero {
+    padding-top: 44px;
+  }
+
+  .hero-profile {
+    width: min(100%, 520px);
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 82px;
+  }
+
+  #top,
+  #about,
+  #experience,
+  #expertise,
+  #work,
+  #contact {
+    scroll-margin-top: 82px;
+  }
+
+  main {
+    padding-top: 66px;
+  }
+
+  .nav-wrap {
+    min-height: 66px;
+  }
+
+  .mobile-nav-panel {
+    top: 66px;
+    height: calc(100dvh - 66px);
+    padding: 24px 20px max(28px, env(safe-area-inset-bottom));
+  }
+
+  .mobile-nav-panel nav a {
+    padding: 17px 0;
+    font-size: clamp(2.1rem, 10vw, 3.35rem);
+  }
+
+  .hero {
+    padding-top: 30px;
+    padding-bottom: 54px;
+    gap: 34px;
+  }
+
+  .eyebrow {
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    margin-top: 18px;
+    font-size: clamp(2.75rem, 12vw, 3.9rem);
+    line-height: .98;
+  }
+
+  .hero-actions {
+    gap: 12px;
+  }
+
+  .hero-profile {
+    width: 100%;
+    max-width: 460px;
+  }
+
+  .profile-frame {
+    min-height: 420px;
+    border-radius: 28px;
+  }
+
+  .profile-photo-shell {
+    border-radius: 20px;
+  }
+
+  .profile-photo-shell .portrait {
+    object-position: center 20%;
+  }
+
+  .profile-card {
+    display: none;
+  }
+
+  .profile-signature {
+    margin-top: 14px;
+    padding-inline: 2px;
+  }
+
+  .section {
+    padding-block: 68px;
+  }
+
+  .cta-panel {
+    border-radius: 26px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-copy strong {
+    max-width: 190px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.55rem, 12vw, 3.25rem);
+  }
+
+  .hero-lead {
+    line-height: 1.6;
+  }
+
+  .profile-frame {
+    min-height: 390px;
+  }
+
+  .hero-metrics div {
+    padding-block: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy > *,
+  .hero-profile {
+    animation: none !important;
+  }
+}
