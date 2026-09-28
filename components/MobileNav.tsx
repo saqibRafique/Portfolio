@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 
 const links = [
   ["About", "#about"],
@@ -45,7 +45,7 @@ export function MobileNav() {
                 href={href}
                 key={href}
                 onClick={() => setOpen(false)}
-                style={{ "--nav-index": index } as React.CSSProperties}
+                style={{ "--nav-index": index } as CSSProperties}
               >
                 <span>{label}</span>
                 <span aria-hidden="true">0{index + 1}</span>
