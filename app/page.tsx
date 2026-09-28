@@ -1,4 +1,9 @@
-import Image from "next/image";
+import { MobileNav } from "@/components/MobileNav";
+import { PrincipleCard } from "@/components/PrincipleCard";
+import { ProfileCard } from "@/components/ProfileCard";
+import { ProjectCard } from "@/components/ProjectCard";
+import { SkillPill } from "@/components/SkillPill";
+
 
 const skills = [
   "React",
@@ -128,9 +133,12 @@ export default function Home() {
             <a href="#work">Work</a>
             <a href="#contact">Contact</a>
           </nav>
-          <a className="button button-small" href="#contact">
-            Let&apos;s talk
-          </a>
+          <div className="nav-actions">
+            <a className="button button-small" href="#contact">
+              Let&apos;s talk
+            </a>
+            <MobileNav />
+          </div>
         </div>
       </header>
 
@@ -186,19 +194,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="portrait-wrap" aria-label="Profile photo">
-          <div className="portrait-glow" />
-          <div className="portrait-card">
-            <Image
-              src="/profile.jpg"
-              alt="Muhammad Saqib Rafique"
-              width={720}
-              height={720}
-              priority
-              className="portrait"
-            />
-          </div>
-        </div>
+        <ProfileCard />
       </section>
 
       <section className="section shell" id="about">
@@ -260,19 +256,18 @@ export default function Home() {
 
           <div className="skill-grid">
             {skills.map((skill) => (
-              <span className="skill-pill" key={skill}>
-                {skill}
-              </span>
+              <SkillPill label={skill} key={skill} />
             ))}
           </div>
 
           <div className="principle-grid">
             {principles.map((principle, index) => (
-              <article className="principle-card" key={principle.title}>
-                <span className="card-index">0{index + 1}</span>
-                <h3>{principle.title}</h3>
-                <p>{principle.text}</p>
-              </article>
+              <PrincipleCard
+                key={principle.title}
+                index={index + 1}
+                title={principle.title}
+                text={principle.text}
+              />
             ))}
           </div>
         </div>
@@ -292,31 +287,7 @@ export default function Home() {
 
         <div className="projects-grid">
           {projects.map((project) => (
-            <a
-              className="project-card"
-              href={project.href}
-              target="_blank"
-              rel="noreferrer"
-              key={project.name}
-            >
-              <div className="project-image-wrap">
-                <Image
-                  src={project.image}
-                  alt={`${project.name} project preview`}
-                  width={1200}
-                  height={720}
-                  className="project-image"
-                />
-              </div>
-              <div className="project-copy">
-                <span>{project.category}</span>
-                <div className="project-title-row">
-                  <h3>{project.name}</h3>
-                  <span aria-hidden="true">↗</span>
-                </div>
-                <p>{project.description}</p>
-              </div>
-            </a>
+            <ProjectCard key={project.name} {...project} />
           ))}
         </div>
       </section>
