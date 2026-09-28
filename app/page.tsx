@@ -27,7 +27,7 @@ const skills = [
 const experience = [
   {
     company: "Arbisoft",
-    role: "Principal / Principal Software Engineer",
+    role: "Principal Software Engineer",
     period: "2021 — Present",
     summary:
       "Leading and contributing to modern web products with a focus on frontend architecture, React, Next.js, TypeScript, quality engineering, and cross-functional delivery.",
