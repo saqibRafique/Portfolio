@@ -27,7 +27,7 @@ const skills = [
 const experience = [
   {
     company: "Arbisoft",
-    role: "Principal / Senior Software Engineer",
+    role: "Principal Software Engineer",
     period: "2021 — Present",
     summary:
       "Leading and contributing to modern web products with a focus on frontend architecture, React, Next.js, TypeScript, quality engineering, and cross-functional delivery.",
@@ -123,7 +123,7 @@ export default function Home() {
             <span className="brand-mark">SR</span>
             <span className="brand-copy">
               <strong>Muhammad Saqib Rafique</strong>
-              <small>Senior Software Engineer</small>
+              <small>Principal Software Engineer</small>
             </span>
           </a>
           <nav className="nav-links" aria-label="Primary navigation">
@@ -146,16 +146,14 @@ export default function Home() {
         <div className="hero-copy">
           <div className="eyebrow">
             <span className="status-dot" />
-            Building dependable products and frontend systems
+            Principal engineering for modern product teams
           </div>
           <h1>
-            Software engineering with
-            <span> clarity, scale, and product impact.</span>
+            I design and lead
+            <span> frontend systems that scale with the product.</span>
           </h1>
           <p className="hero-lead">
-            I&apos;m Muhammad Saqib Rafique, a Senior Software Engineer focused on
-            modern frontend architecture, React, Next.js, Angular, TypeScript,
-            automation, and high-quality user experiences.
+            I&apos;m Muhammad Saqib Rafique, a Principal Software Engineer with 6+ years of experience building and evolving production platforms across React, Next.js, Angular, TypeScript, automation, and frontend architecture.
           </p>
           <div className="hero-actions">
             <a className="button" href="#work">
@@ -178,18 +176,18 @@ export default function Home() {
               LinkedIn <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <div className="hero-metrics" aria-label="Engineering focus">
+          <div className="hero-metrics" aria-label="Engineering highlights">
             <div>
-              <strong>Frontend</strong>
-              <span>Architecture & UX</span>
+              <strong>6+ years</strong>
+              <span>Production engineering</span>
             </div>
             <div>
-              <strong>Full-stack</strong>
-              <span>Integration & APIs</span>
+              <strong>Principal-level</strong>
+              <span>Architecture & technical leadership</span>
             </div>
             <div>
-              <strong>Quality</strong>
-              <span>Testing & automation</span>
+              <strong>End-to-end quality</strong>
+              <span>Testing, DX & delivery</span>
             </div>
           </div>
         </div>
