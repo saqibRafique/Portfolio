@@ -52,17 +52,6 @@ export function MobileNav() {
               </a>
             ))}
           </nav>
-
-          <div className="mobile-nav-footer">
-            <a
-              href="https://www.linkedin.com/in/muhammad-saqib-rafique/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn ↗
-            </a>
-            <a href="mailto:saqib_awan29@hotmail.com">Email ↗</a>
-          </div>
         </div>
       </div>
     </div>
